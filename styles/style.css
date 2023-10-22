@@ -664,6 +664,9 @@ h2 {
   html {
     font-size: 12px;
   }
+  .container {
+    max-width: 1200px;
+  }
 }
 @media (max-width: 1024px) {
   html {
@@ -671,6 +674,9 @@ h2 {
   }
   .header__container img {
     width: 20rem;
+  }
+  .container {
+    max-width: 1024px;
   }
 }
 @media (max-width: 900px) {
@@ -683,6 +689,9 @@ h2 {
   .expenses-wrapper img {
     bottom: 0.3rem;
   }
+  .container {
+    max-width: 900px;
+  }
 }
 @media (max-width: 800px) {
   html {
@@ -693,6 +702,9 @@ h2 {
   }
   .expenses-wrapper img {
     bottom: 0.5rem;
+  }
+  .container {
+    max-width: 800px;
   }
 }
 @media (max-width: 700px) {
@@ -710,6 +722,9 @@ h2 {
   .expenses-wrapper img {
     bottom: 0.9rem;
   }
+  .container {
+    max-width: 700px;
+  }
 }
 @media (max-width: 500px) {
   html {
@@ -723,6 +738,9 @@ h2 {
   }
   .expenses-wrapper img {
     bottom: 1.2rem;
+  }
+  .container {
+    max-width: 500px;
   }
 }
 @media (max-width: 400px) {
@@ -738,10 +756,16 @@ h2 {
   .expenses-wrapper img {
     bottom: 1.5rem;
   }
+  .container {
+    max-width: 400px;
+  }
 }
 @media (max-width: 300px) {
   html {
     font-size: 4px;
+  }
+  .container {
+    max-width: 300px;
   }
 }
 
