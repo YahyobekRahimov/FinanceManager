@@ -346,9 +346,8 @@ h2 {
   #input {
     height: 40vh;
   }
-  #amount,
   #comment {
-    font-size: 8rem;
+    font-size: 4rem;
   }
   .input__container {
     label {
@@ -358,6 +357,7 @@ h2 {
   #amount {
     width: 80%;
     margin-bottom: 10px;
+    font-size: 8rem;
   }
   #comment {
     width: 80%;
