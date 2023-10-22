@@ -428,6 +428,11 @@ body {
   margin-right: auto;
 }
 
+#error {
+  font-size: 2rem;
+  color: #dd2121;
+}
+
 .header__container {
   display: flex;
   justify-content: center;
