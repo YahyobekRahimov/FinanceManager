@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0px;
+  padding: 1.5rem 0px;
 }
 
 .finance-management {
@@ -17,10 +17,10 @@
 
 .card {
   background-color: $clr-blue-800;
-  padding: 1em;
+  padding: 1.5rem;
   font-size: 1.5rem;
   border-radius: 15px;
-  width: 420px;
+  width: 26.25rem;
   text-align: center;
 }
 
@@ -30,7 +30,7 @@
   }
   button {
     background-color: #7af27a;
-    border: 3px solid $clr-green-900;
+    border: 0.1875rem solid $clr-green-900;
     color: $clr-green-900;
     transition: 0.2s all ease-in;
     &:hover {
@@ -51,7 +51,7 @@
 }
 #expense-button {
   background-color: #fee1e1;
-  border: 3px solid $clr-red-900;
+  border: 0.1875rem solid $clr-red-900;
   color: $clr-red-900;
   transition: 0.2s all ease-in;
   &:hover {
@@ -74,30 +74,34 @@
 }
 table {
   margin-top: 50px;
-  width: 100%
+  width: 90%
+}
+.table-container {
+  display: flex;
+  justify-content: center;
 }
 th,
 td {
-  border: 1px solid black;
+  border: 0.0625rem solid black;
   font-size: 1.5rem;
-  width: 300px;
-  height: 40px;
+  width: 18.75rem;
+  height: 2.5rem;
   text-align: center;
 }
 thead,
 tbody {
   :first-child {
-    width: 80px;
+    width: 5rem;
   }
   :nth-child(2) {
-    width: 1000px;
+    width: 62.5rem;
   }
 }
 
 button {
   border: none;
   // background: none;
-  padding: 10px 20px;
+  padding: 0.625rem 1.5rem;
   border-radius: 20px;
   margin-top: 20px;
 }
@@ -126,12 +130,12 @@ button {
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-  gap: 10px;
+  gap: 0.625rem;
   textarea {
     resize: none;
     border-radius: 5px;
     font-size: 1.5rem;
-    padding: 10px;
+    padding: 0.625rem;
     
   }
   label {
@@ -140,17 +144,17 @@ button {
   }
   input {
     font-size: 3rem;
-    width: 400px;
+    width: 25rem;
     border-radius: 10px;
   }
   input[type='number'] {
     font-size: 2.5rem;
-    padding: 8px;
+    padding: 0.5rem;
   }
   input[type="submit"] {
-    border: 3px solid $clr-blue-900;
+    border: 0.1875rem solid $clr-blue-900;
     background-color: #98eee7;
-    width: 300px;
+    width: 18.75rem;
     transition: 0.12s all ease-in;
     &:hover {
       background-color: $clr-blue-900;
@@ -171,11 +175,121 @@ input[type="number"] {
   
 #cancel {
     font-size: 1.125rem;
-    border: 3px solid $clr-red-900;
+    border: 0.1875rem solid $clr-red-900;
     background-color: #fee1e1;
     transition: 0.2s all ease-in;
     &:hover {
         background-color: $clr-red-900;
         color: white;
     }
+}
+
+.header__container {
+  width: 15.625rem;
+}
+
+.expenses-wrapper img {
+  height: 3.75rem;
+}
+
+.income-card img {
+  height: 3.75rem;
+  position: relative;
+}
+
+h2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 1440px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 9px;
+  }
+  .income-card img {
+    bottom: 0.3rem;
+  }
+  .expenses-wrapper img {
+    bottom: 0.3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 8px;
+  }
+  .income-card img {
+    bottom: 0.5rem;
+  }
+  .expenses-wrapper img {
+    bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 7px;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 6px;
+  }
+  .income-card img {
+    bottom: 0.9rem;
+  }
+  .expenses-wrapper img {
+    bottom: 0.9rem;
+  }
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 5px;
+  }
+  .card {
+    padding: 1rem;
+  }
+  .income-card img {
+    bottom: 1.2rem;
+  }
+  .expenses-wrapper img {
+    bottom: 1.2rem;
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 4px;
+  }
+  .card {
+    padding: 0.75rem;
+  }
+  .income-card img {
+    bottom: 1.5rem;
+  }
+  .expenses-wrapper img {
+    bottom: 1.5rem;
+  }
+}
+@media (max-width: 300px) {
+  html {
+    font-size: 4px;
+  }
 }
