@@ -79,6 +79,7 @@ table {
 .table-container {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 th,
 td {
@@ -98,12 +99,19 @@ tbody {
   }
 }
 
+th {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.909);
+  border: 0.0625rem solid white;
+  font-weight: 500;
+}
+
 button {
   border: none;
-  // background: none;
-  padding: 0.625rem 1.5rem;
+  padding: 0.625rem 1.25rem;
+  width: max-content;
   border-radius: 20px;
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 #input {
@@ -120,7 +128,7 @@ button {
 .input__container {
   background: #ede8e8;
   position: fixed;
-  top: 30px;
+  top: 2rem;
   right: 0;
   left: 0;
   width: 80%;
@@ -146,6 +154,10 @@ button {
     font-size: 3rem;
     width: 25rem;
     border-radius: 10px;
+    border: none;
+  }
+  textarea {
+    border: none;
   }
   input[type='number'] {
     font-size: 2.5rem;
@@ -185,7 +197,9 @@ input[type="number"] {
 }
 
 .header__container {
-  width: 15.625rem;
+  img {
+    width: 15.625rem;
+  }
 }
 
 .expenses-wrapper img {
@@ -200,6 +214,11 @@ input[type="number"] {
 h2 {
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+#income-button,
+#expense-button {
+  font-size: 2.5rem;
 }
 
 @media (max-width: 1440px) {
@@ -217,6 +236,11 @@ h2 {
 @media (max-width: 1024px) {
   html {
     font-size: 11px;
+  }
+  .header__container {
+    img {
+      width: 20rem;
+    }
   }
 }
 
