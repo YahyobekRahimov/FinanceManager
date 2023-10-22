@@ -35,20 +35,27 @@ document.addEventListener('DOMContentLoaded', function() {
     INCOME_BUTTON.addEventListener('click', function() {
         INPUT_BLOCK.style.display = 'block';
         isIncome = true;
+        document.getElementById('error').textContent = ``;
     });
     
     EXPENSE_BUTTON.addEventListener('click', function() {
         INPUT_BLOCK.style.display = 'block';
         isIncome = false;
+        document.getElementById('error').textContent = ``;
     });
     
     CANCEL_BUTTON.addEventListener('click', function() {
         INPUT_BLOCK.style.display = 'none';
+        clearInputData()
     });
     
-    let transactionType = isIncome;
     SUBMIT_BUTTON.addEventListener('click', function() {
+        let transactionType = isIncome;
         let amountEntered = parseInt(INPUT_AMOUNT.value);
+        if (isNaN(amountEntered)) {
+            document.getElementById('error').textContent = `Iltimos, son kiriting`;
+            return;
+        }
         if (isIncome) addToIncome(amountEntered);
         if (!isIncome) addToExpenses(amountEntered);
         INPUT_BLOCK.style.display = 'none';
@@ -58,16 +65,20 @@ document.addEventListener('DOMContentLoaded', function() {
         const time = getCurrentDateTime();
         storeTransaction(transactionNumber, comment, amountEntered, transactionType, time);
         addToTable(transactionNumber, comment, amountEntered, transactionType, time);
-        return;
+        clearInputData();
     });
 
+    function clearInputData() {
+        document.getElementById('comment').value = '';
+        document.getElementById('amount').value = '';
+    }
     function storeTransaction(transactionNumber, comment, amount, transactionType) {
         // Store the transaction data in localStorage
         localStorage.setItem(`transaction-${transactionNumber}`, JSON.stringify({
-            comment,
-            amount,
-            transactionType,
-            time: getCurrentDateTime(),
+            "comment": comment,
+            "amount": amount,
+            "transactionType": transactionType,
+            "time": getCurrentDateTime(),
         }));
     }
 
@@ -78,9 +89,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const day = String(now.getDate()).padStart(2, '0');
         const hours = String(now.getHours()).padStart(2, '0');
         const minutes = String(now.getMinutes()).padStart(2, '0');
-        const seconds = String(now.getSeconds()).padStart(2, '0');
     
-        const dateTimeString = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+        const dateTimeString = `${year}-${month}-${day} ${hours}:${minutes}`;
         
         return dateTimeString;
     }
@@ -141,7 +151,17 @@ document.addEventListener('DOMContentLoaded', function() {
         let transactionTypeOutput;
         if (transactionType) {
             transactionTypeOutput = 'Kirim';
+            cell1.style.background = '#7afa66'; 
+            cell2.style.background = '#7afa66'; 
+            cell3.style.background = '#7afa66'; 
+            cell4.style.background = '#7afa66'; 
+            cell5.style.background = '#7afa66';
         } else if (!transactionType) {
+            cell1.style.background = '#f76363'; 
+            cell2.style.background = '#f76363'; 
+            cell3.style.background = '#f76363'; 
+            cell4.style.background = '#f76363'; 
+            cell5.style.background = '#f76363'; 
             transactionTypeOutput = "Chiqim"
         }
 
