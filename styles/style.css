@@ -732,6 +732,7 @@ h2 {
   }
   .card {
     padding: 1rem;
+    width: 70%;
   }
   .income-card img {
     bottom: 1.2rem;
@@ -742,8 +743,33 @@ h2 {
   .container {
     max-width: 500px;
   }
+  .finance-management {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  button {
+    padding: 10px 30px;
+    border-radius: 10px;
+  }
+  #expense-button,
+  #income-button {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  #income,
+  #current-balance,
+  #expenses {
+    font-size: 8rem;
+  }
+  .income-wrapper img,
+  .expenses-wrapper img {
+    height: 45px;
+  }
 }
-@media (max-width: 400px) {
+@media (max-width: 375px) {
   html {
     font-size: 4px;
   }
@@ -758,6 +784,10 @@ h2 {
   }
   .container {
     max-width: 400px;
+  }
+  .income-wrapper img,
+  .expenses-wrapper img {
+    height: 30px;
   }
 }
 @media (max-width: 300px) {
