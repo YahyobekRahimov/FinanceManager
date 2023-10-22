@@ -379,10 +379,46 @@ th {
   padding: 0;
 }
 
+/* poppins-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/poppins-v20-latin-regular.woff2") format("woff2");
+}
+/* poppins-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/poppins-v20-latin-500.woff2") format("woff2");
+}
+/* poppins-600 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/poppins-v20-latin-600.woff2") format("woff2");
+}
+/* poppins-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/poppins-v20-latin-700.woff2") format("woff2");
+}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
 }
 
 .container {
@@ -390,6 +426,187 @@ th {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.header__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+.finance-management {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  background-color: #a8ccc9;
+  padding: 1em;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  width: 420px;
+  text-align: center;
+}
+
+.income-card #income {
+  color: #008000;
+}
+.income-card button {
+  background-color: #7af27a;
+  border: 3px solid #008000;
+  color: #008000;
+  transition: 0.2s all ease-in;
+}
+.income-card button:hover {
+  background-color: #008000;
+  color: white;
+}
+
+#income {
+  font-size: 3rem;
+  position: relative;
+  bottom: 10px;
+}
+
+#expenses {
+  font-size: 3rem;
+  position: relative;
+  bottom: 10px;
+}
+
+#expense-button {
+  background-color: #fee1e1;
+  border: 3px solid #dd2121;
+  color: #dd2121;
+  transition: 0.2s all ease-in;
+}
+#expense-button:hover {
+  background-color: #dd2121;
+  color: white;
+}
+
+#current-balance {
+  font-size: 3rem;
+  color: #091ac8;
+}
+
+.expenses-wrapper img {
+  transform: rotateZ(180deg);
+  position: relative;
+}
+
+.expense-card #expenses {
+  color: #dd2121;
+}
+
+table {
+  margin-top: 50px;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid black;
+  font-size: 1.5rem;
+  width: 300px;
+  height: 40px;
+  text-align: center;
+}
+
+thead :first-child,
+tbody :first-child {
+  width: 80px;
+}
+thead :nth-child(2),
+tbody :nth-child(2) {
+  width: 1000px;
+}
+
+button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+#input {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.input__container {
+  background: #ede8e8;
+  position: fixed;
+  top: 30px;
+  right: 0;
+  left: 0;
+  width: 80%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  gap: 10px;
+}
+.input__container textarea {
+  resize: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+.input__container label {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.input__container input {
+  font-size: 3rem;
+  width: 400px;
+  border-radius: 10px;
+}
+.input__container input[type=number] {
+  font-size: 2.5rem;
+  padding: 8px;
+}
+.input__container input[type=submit] {
+  border: 3px solid #091ac8;
+  background-color: #98eee7;
+  width: 300px;
+  transition: 0.12s all ease-in;
+}
+.input__container input[type=submit]:hover {
+  background-color: #091ac8;
+  color: white;
+}
+
+/* Hide the spinner controls */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide the spinner controls for Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#cancel {
+  font-size: 1.125rem;
+  border: 3px solid #dd2121;
+  background-color: #fee1e1;
+  transition: 0.2s all ease-in;
+}
+#cancel:hover {
+  background-color: #dd2121;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

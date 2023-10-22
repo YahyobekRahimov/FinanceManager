@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
-    <title>Document</title>
+    <title>Finance Manager</title>
 </head>
 
 <body>
@@ -14,31 +14,66 @@
 
     <header class="header">
         <div class="container header__container">
-
+            <img width="250" src="./images/finance-manager-low-resolution-logo-transparent.png" alt="Logo">
         </div>
     </header>
 
     <!-- Main -->
 
     <main>
-        <section class="">
-            <div class="container">
-
+        <section class="finance-management">
+            <div class="container finance-management">
+                <div class="card income-card">
+                    <h2>Kirimlar</h2>
+                    <div class="income-wrapper">
+                        <span id="income">0</span>
+                        <img height="60" src="./images/up-arrow-svgrepo-com.svg" alt="">
+                    </div>
+                    <button id="income-button">Yangi kirim</button>
+                </div>
+                <div class="card balance-card">
+                    <h2>Balans</h2>
+                    <div id="current-balance">0</div>
+                </div>
+                <div class="card expense-card">
+                    <h2>Chiqimlar</h2>
+                    <div class="expenses-wrapper">
+                        <span id="expenses">0</span>
+                        <img height="60" src="./images/up-arrow-svgrepo-com(1).svg" alt="">
+                    </div>
+                    <button id="expense-button">Yangi chiqim</button>
+                </div>
             </div>
         </section>
 
-        <section class="">
+        <section class="table">
             <div class="container">
+                <table id="table">
+                    <thead>
+                        <th>№</th>
+                        <th>Izoh</th>
+                        <th>Miqdor</th>
+                        <th>Chiqim / Kirim</th>
+                        <th>Qachon</th>
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
+        <section id="input">
+            <div class="container input__container">
+                <label for="amount">Miqdorni kiriting</label>
+                <br>
+                <input placeholder="Miqdorini kiriting" id="amount" type="number">
+                <textarea placeholder="Izoh kiriting..." id="comment" cols=" 20" rows="5"></textarea>
+                <input id="submit" type="submit" value="Kiritish">
+                <button id="cancel">Bekor qilish</button>
             </div>
         </section>
     </main>
-
-    <footer>
-        <div class="container footer__container">
-
-        </div>
-    </footer>
 </body>
+<script src="JS/calculations.js"></script>
 
 </html>
