@@ -772,10 +772,13 @@ h2 {
   }
   #amount,
   #comment {
-    font-size: 4rem;
+    font-size: 8rem;
+  }
+  .input__container label {
+    font-size: 7rem;
   }
   #amount {
-    width: 70%;
+    width: 80%;
     margin-bottom: 10px;
   }
   #comment {
@@ -789,6 +792,9 @@ h2 {
   }
   #cancel {
     font-size: 5rem;
+  }
+  .input__container {
+    width: 95%;
   }
 }
 @media (max-width: 375px) {
